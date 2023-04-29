@@ -8,12 +8,16 @@ import Sobre from './pages/sobre'
 import Erro404 from './pages/Erro404'
 import Login from "./pages/login"
 import Principal from "./componentes/principal"
+import './App.css'
+
 
 export default function App(){
   const [logado, setLogado] =  useState(false);
+  const [usuarioID, setUsuarioID] = useState();
 
   function handleLogin(){
     setLogado(true);
+    setUsuarioID(100);
   }
   function handleLogout(){
     setLogado(false);
@@ -24,11 +28,11 @@ export default function App(){
       <Routes>
         {logado?
         <>
-        <Route path="/" element={<Principal onLogout={handleLogout}/>}>
+        <Route path="/" element={<Principal usuarioID={usuarioID} onLogout={handleLogout}/>}>
           <Route index element={<Home />} />
           <Route path="pedidos" element={<Pedidos/>} />
           <Route path="novo" element={<Novo/>} />
-          <Route path="sobre" element={<Sobre/>} />
+          <Route path="sobre/:id" element={<Sobre/>} />  //parametro de rota
         </Route>
         </>
         :
