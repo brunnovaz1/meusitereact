@@ -10,12 +10,13 @@ export default function Header(props) {
   }
   return (
     <header>
-      <h1>Meu Site React</h1>
+      <h1>FACIT</h1>
       <nav>
         <ul>
           <li><NavLink to="/">Home</NavLink></li>
-          <li><NavLink to="/pedidos">Meus Pedidos</NavLink></li>
-          <li><NavLink to="/novo">Novo Pedido</NavLink></li>
+          <li><NavLink to="/grade">Grade Horaria</NavLink></li>
+          <li><NavLink to="/notas">Notas</NavLink></li>
+          <li><NavLink to="/financeiro">Financeiro</NavLink></li>
           <li><NavLink to={`/sobre/${props.usuarioID}`}>Sobre</NavLink></li>
           <li><button onClick={handleClick}>Sair</button></li>
         </ul>
