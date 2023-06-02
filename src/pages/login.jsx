@@ -1,6 +1,9 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate} from "react-router-dom"
 import Section from "../componentes/section"
+import './login.css'
+
+
 
 export default function Login(props){
     
@@ -25,8 +28,7 @@ export default function Login(props){
     }
 
 
-
-    return(
+    return(       
         <Section titulo="Login">
             <p>{email}</p>
             <input type="email" placeholder="e-mail" onChange={handleChange} 
